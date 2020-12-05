@@ -1046,8 +1046,8 @@
 
 "@babel/register@^7.12.1":
   version "7.12.1"
-  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.12.1.tgz#cdb087bdfc4f7241c03231f22e15d211acf21438"
-  integrity sha512-XWcmseMIncOjoydKZnWvWi0/5CUCD+ZYKhRwgYlWOrA8fGZ/FjuLRpqtIhLOVD/fvR1b9DQHtZPn68VvhpYf+Q==
+  resolved "https://registry.npm.taobao.org/@babel/register/download/@babel/register-7.12.1.tgz?cache=0&sync_timestamp=1602802632644&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fregister%2Fdownload%2F%40babel%2Fregister-7.12.1.tgz#cdb087bdfc4f7241c03231f22e15d211acf21438"
+  integrity sha1-zbCHvfxPckHAMjHyLhXSEazyFDg=
   dependencies:
     find-cache-dir "^2.0.0"
     lodash "^4.17.19"

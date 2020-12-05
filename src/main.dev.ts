@@ -45,8 +45,8 @@ const installExtensions = async () => {
 
   return installer
     .default(
-      extensions.map((name) => installer[name]),
-      forceDownload
+      extensions.map(name => installer[name]),
+      forceDownload,
     )
     .catch(console.log);
 };
@@ -59,9 +59,9 @@ const createWindow = async () => {
     await installExtensions();
   }
 
-  const RESOURCES_PATH = app.isPackaged
-    ? path.join(process.resourcesPath, 'resources')
-    : path.join(__dirname, '../resources');
+  const RESOURCES_PATH = app.isPackaged ?
+    path.join(process.resourcesPath, 'resources') :
+    path.join(__dirname, '../resources');
 
   const getAssetPath = (...paths: string[]): string => {
     return path.join(RESOURCES_PATH, ...paths);

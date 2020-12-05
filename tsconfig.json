@@ -52,6 +52,8 @@
     "src/main.prod.js",
     "src/renderer.prod.js",
     "src/dist",
-    ".erb/dll"
+    ".erb/dll",
+    ".erb/configs",
+    ".erb/scripts"
   ]
 }
