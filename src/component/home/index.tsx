@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { pink, blue, purple } from '@material-ui/core/colors';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
+import AppDial from '@con/app-dial';
+
 interface IProps {}
 interface IScrollProps {
   children?: ReactNode,
@@ -95,6 +97,7 @@ const Home: FC = (props: IProps, state: IState) => {
   return (
     <Box className={classes.container}>
       <p id="back-to-top" className={classes.hyphenStyle} />
+      <AppDial />
 
       <Paper square className={classes.paperStyle}>
         <section className={classes.section}>
@@ -118,6 +121,26 @@ const Home: FC = (props: IProps, state: IState) => {
             <span style={{ color: blue.A400 }}>Secondary color: 银河系物质的主要部分组成一个薄薄的圆盘</span>
             <span style={{ color: purple.A400 }}>Default color: 银河系物质的主要部分组成一个薄薄的圆盘</span>
           </p>
+
+          <div>
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>滚动测试 --- 滚动测试 ---</h2><br />
+            <h2>*** End 滚动测试 --- 滚动测试 --- End ***</h2><br />
+          </div>
 
         </section>
 
