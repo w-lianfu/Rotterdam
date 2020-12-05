@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import App from './App';
+import AppPage from '@con/app-page';
 
-render(<App />, document.getElementById('root'));
+render(<AppPage />, document.getElementById('root'));
