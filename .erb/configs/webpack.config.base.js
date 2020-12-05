@@ -4,6 +4,8 @@
 
 import path from 'path';
 import webpack from 'webpack';
+
+import paths from './paths';
 import { dependencies as externals } from '../../src/package.json';
 
 export default {
@@ -36,6 +38,25 @@ export default {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
     modules: [path.join(__dirname, '../src'), 'node_modules'],
+    alias: {
+      '@': paths.appSrc,
+      '@common': paths.appCommon,
+      '@commonComp': paths.commonComp,
+      '@commonStore': paths.commonStore,
+      '@commonScss': paths.commonScss,
+      '@commonStyled': paths.commonStyled,
+      '@comp': paths.appComp,
+      '@con': paths.appCon,
+      '@store': paths.appStore,
+      '@scss': paths.appScss,
+      '@styled': paths.appStyled,
+      '@util': paths.appUtil,
+      '@tool': paths.appTool,
+      '@theme': paths.appTheme,
+      '@assets': paths.appAssets,
+      '@image': paths.appImage,
+      '@doc': paths.appDoc,
+    },
   },
 
   plugins: [

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ES2018",
     "module": "CommonJS",
     "lib": ["dom", "esnext"],
@@ -20,8 +21,31 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "allowJs": true
+    "allowJs": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@common/*": ["src/common/*"],
+      "@commonComp/*": ["src/common/component/*"],
+      "@commonStore/*": ["src/common/store/*"],
+      "@commonScss/*": ["src/common/scss/*"],
+      "@commonStyled/*": ["src/common/styled/*"],
+      "@comp/*": ["src/component/*"],
+      "@con/*": ["src/container/*"],
+      "@store/*": ["src/store/*"],
+      "@scss/*": ["src/scss/*"],
+      "@styled/*": ["src/styled/*"],
+      "@util/*": ["src/util/*"],
+      "@tool/*": ["src/util/tool/*"],
+      "@theme/*": ["src/util/theme/*"],
+      "@lib/*": ["src/lib/*"],
+      "@assets/*": ["src/assets/*"],
+      "@image/*": ["src/assets/image/*"],
+      "@doc/*": ["src/doc/*"]
+    }
   },
+  "include": ["src"],
   "exclude": [
     "test",
     "release",
