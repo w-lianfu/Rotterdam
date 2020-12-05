@@ -38,6 +38,7 @@ module.exports = {
     'import/no-cycle': 'off',
     'import/no-named-as-default': 'off',
     'import/no-named-as-default-member': 'off',
+    'react/require-default-props': [0],
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
