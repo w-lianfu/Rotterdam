@@ -1,4 +1,6 @@
 import React, { FC, ReactNode } from 'react';
+import { withRouter, RouteComponentProps, Link } from 'react-router-dom';
+import { observer } from 'mobx-react';
 import { Paper, Zoom, Fab, useScrollTrigger, Box, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { pink, blue, purple } from '@material-ui/core/colors';
@@ -6,7 +8,9 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 import AppDial from '@con/app-dial';
 
-interface IProps {}
+interface IProps extends RouteComponentProps {
+  history: any,
+}
 interface IScrollProps {
   children?: ReactNode,
   window?: any,
@@ -35,7 +39,7 @@ const useStyles = makeStyles(theme => ({
   upTopStyle: {
     position: 'fixed',
     bottom: theme.spacing(2),
-    right: theme.spacing(2),
+    left: theme.spacing(2),
   },
   section: {
     padding: theme.spacing(2),
@@ -113,6 +117,10 @@ const Home: FC = (props: IProps, state: IState) => {
             <Button variant="outlined">Default Button</Button>
           </div>
 
+          <Link to="/setting">
+            <Button variant="contained" color="primary">Setting Page</Button>
+          </Link>
+
           <p>
             <span style={{ color: pink.A400 }}>Primary color: Here are some examples.</span>
             <span style={{ color: blue.A400 }}>Secondary color: Here are some examples.</span>
@@ -121,26 +129,6 @@ const Home: FC = (props: IProps, state: IState) => {
             <span style={{ color: blue.A400 }}>Secondary color: 银河系物质的主要部分组成一个薄薄的圆盘</span>
             <span style={{ color: purple.A400 }}>Default color: 银河系物质的主要部分组成一个薄薄的圆盘</span>
           </p>
-
-          <div>
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>滚动测试 --- 滚动测试 ---</h2><br />
-            <h2>*** End 滚动测试 --- 滚动测试 --- End ***</h2><br />
-          </div>
 
         </section>
 
@@ -157,4 +145,4 @@ const Home: FC = (props: IProps, state: IState) => {
   );
 };
 
-export default Home;
+export default withRouter(observer(Home));

@@ -20,7 +20,10 @@ const useStyles = makeStyles((theme: Theme) =>
     speedDial: {
       position: 'fixed',
       bottom: theme.spacing(2),
-      left: theme.spacing(3),
+      right: theme.spacing(3),
+    },
+    iconBg: {
+      backgroundColor: '#22c298',
     },
   }));
 
@@ -45,9 +48,19 @@ const AppDial = (props: IProps, state: IState) => {
     // history.push('/lock');
   };
 
+  // go to Top
+  const onTop = () => {
+    const anchor = document.querySelector('#back-to-top');
+
+    if (anchor) anchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+  };
+
   const actions = [
     { icon: <RefreshIcon color="primary" />, name: 'Refresh' },
-    { icon: <ArrowUpwardIcon color="primary" />, name: 'Top' },
+    { icon: <ArrowUpwardIcon color="primary" onClick={onTop} />, name: 'Top' },
     { icon: <FavoriteIcon color="primary" />, name: 'Like' },
     { icon: <LockIcon color="primary" onClick={onLock} />, name: 'Lock' },
   ];
@@ -58,7 +71,7 @@ const AppDial = (props: IProps, state: IState) => {
       open={open}
       onOpen={openDial}
       onClose={closeDial}
-      direction="right"
+      direction="up"
       className={classes.speedDial}>
 
       {actions.map(action => (
@@ -66,6 +79,7 @@ const AppDial = (props: IProps, state: IState) => {
           key={action.name}
           icon={action.icon}
           tooltipTitle={action.name}
+          tooltipPlacement="left"
           onClick={closeDial} />
       ))}
     </SpeedDial>

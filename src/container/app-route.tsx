@@ -11,6 +11,7 @@ import '@commonScss/index.scss';
 import auth from '@commonStore/auth';
 import AppLock from './app-lock';
 import Home from '@comp/home';
+import Setting from '@comp/setting';
 
 interface IProps extends RouteComponentProps {
   history: any,
@@ -28,6 +29,7 @@ const AppRoute = (props: IProps, state: IState) => {
     <Router>
       <Switch>
         <Route path="/" component={isAuth ? Home : AppLock} />
+        <Route exact path="/setting" component={Setting} />
         <Route component={isAuth ? Home : AppLock} />
       </Switch>
     </Router>
