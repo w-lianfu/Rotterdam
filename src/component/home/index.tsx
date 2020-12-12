@@ -1,12 +1,14 @@
 import React, { FC, ReactNode } from 'react';
 import { withRouter, RouteComponentProps, Link } from 'react-router-dom';
 import { observer } from 'mobx-react';
-import { Paper, Zoom, Fab, useScrollTrigger, Box, Button } from '@material-ui/core';
+import { Paper, Zoom, Fab, useScrollTrigger, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { pink, blue, purple } from '@material-ui/core/colors';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 import AppDial from '@con/app-dial';
+import AppTop from '@con/app-top';
+import AppHeader from '@con/app-header';
 
 interface IProps extends RouteComponentProps {
   history: any,
@@ -40,32 +42,6 @@ const useStyles = makeStyles(theme => ({
     position: 'fixed',
     bottom: theme.spacing(2),
     left: theme.spacing(2),
-  },
-  section: {
-    padding: theme.spacing(2),
-
-    '& div': {
-      display: 'flex',
-      flexDirection: 'column',
-
-      '& button, & label': {
-        marginBottom: '16px',
-        width: '200px',
-      },
-    },
-    '& p': {
-      display: 'flex',
-      flexDirection: 'column',
-
-      '& span': {
-        marginBottom: '16px',
-      },
-    },
-    '& ul': {
-      '& li': {
-        marginBottom: '16px',
-      },
-    },
   },
 }));
 
@@ -104,32 +80,10 @@ const Home: FC = (props: IProps, state: IState) => {
       <AppDial />
 
       <Paper square className={classes.paperStyle}>
-        <section className={classes.section}>
-
-          <div>
-            <b>Contained</b>
-            <Button variant="contained" color="primary">Primary Button</Button>
-            <Button variant="contained" color="secondary">Secondary Button</Button>
-            <Button variant="contained">Default Button</Button>
-            <b>Outlined</b>
-            <Button variant="outlined" color="primary">Primary Button</Button>
-            <Button variant="outlined" color="secondary">Secondary Button</Button>
-            <Button variant="outlined">Default Button</Button>
-          </div>
-
-          <Link to="/setting">
-            <Button variant="contained" color="primary">Setting Page</Button>
-          </Link>
-
-          <p>
-            <span style={{ color: pink.A400 }}>Primary color: Here are some examples.</span>
-            <span style={{ color: blue.A400 }}>Secondary color: Here are some examples.</span>
-            <span style={{ color: purple.A400 }}>Default color: Here are some examples.</span>
-            <span style={{ color: pink.A400 }}>Primary color: 银河系物质的主要部分组成一个薄薄的圆盘</span>
-            <span style={{ color: blue.A400 }}>Secondary color: 银河系物质的主要部分组成一个薄薄的圆盘</span>
-            <span style={{ color: purple.A400 }}>Default color: 银河系物质的主要部分组成一个薄薄的圆盘</span>
-          </p>
-
+        <section>
+          <AppTop />
+          <AppHeader />
+          <Link to="/setting">Setting Page</Link>
         </section>
 
         <ScrollTop>

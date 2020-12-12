@@ -28,7 +28,7 @@ const AppRoute = (props: IProps, state: IState) => {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={isAuth ? Home : AppLock} />
+        <Route exact path="/" component={isAuth ? Home : AppLock} />
         <Route exact path="/setting" component={Setting} />
         <Route component={isAuth ? Home : AppLock} />
       </Switch>
