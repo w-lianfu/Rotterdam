@@ -52,10 +52,12 @@ const AppDial = (props: IProps, state: IState) => {
   const onTop = () => {
     const anchor = document.querySelector('#back-to-top');
 
-    if (anchor) anchor.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-    });
+    if (anchor) {
+      anchor.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
   };
 
   const actions = [

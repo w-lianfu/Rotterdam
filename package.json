@@ -1,7 +1,7 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Fast Refresh for rapid application development",
+  "name": "Rotterdam",
+  "productName": "Rotterdam",
+  "description": "Rotterdam",
   "scripts": {
     "build": "concurrently \"yarn build:main\" \"yarn build:renderer\"",
     "build:main": "cross-env NODE_ENV=production webpack --config ./.erb/configs/webpack.config.main.prod.babel.js",
@@ -21,8 +21,8 @@
     ]
   },
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.erb.ElectronReact",
+    "productName": "Rotterdam",
+    "appId": "org.erb.Rotterdam",
     "files": [
       "dist/",
       "node_modules/",
@@ -78,39 +78,30 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "electron-react-boilerplate",
-      "repo": "electron-react-boilerplate",
+      "owner": "Rotterdam",
+      "repo": "Rotterdam",
       "private": false
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
+    "url": "git+https://github.com/w-lianfu/Rotterdam"
   },
   "author": {
-    "name": "Electron React Boilerplate Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://electron-react-boilerplate.js.org"
+    "name": "wlianfu",
+    "email": "h5lianfu@gmail.com",
+    "url": "https://github.com/w-lianfu"
   },
   "contributors": [
     {
-      "name": "Amila Welihinda",
-      "email": "amilajack@gmail.com",
-      "url": "https://github.com/amilajack"
-    },
-    {
-      "name": "John Tran",
-      "email": "jptran318@gmail.com",
-      "url": "https://github.com/jooohhn"
+      "name": "wlianfu",
+      "email": "h5lianfu@gmail.com",
+      "url": "https://github.com/w-lianfu"
     }
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"
-  },
   "keywords": [
     "electron",
-    "boilerplate",
     "react",
     "typescript",
     "ts",
@@ -131,7 +122,8 @@
       "jsx",
       "ts",
       "tsx",
-      "json"
+      "json",
+			"scss"
     ],
     "moduleDirectories": [
       "node_modules",
@@ -275,9 +267,6 @@
     "node": ">=10.x",
     "npm": ">=6.x",
     "yarn": ">=1.21.3"
-  },
-  "collective": {
-    "url": "https://opencollective.com/electron-react-boilerplate-594"
   },
   "browserslist": [],
   "prettier": {

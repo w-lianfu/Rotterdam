@@ -22,7 +22,7 @@ const AppRoute = (props: IProps, state: IState) => {
   const { isAuth } = auth;
 
   useEffect(() => {
-    console.log('isAuth: ', isAuth);
+    // console.log('isAuth: ', isAuth);
   }, [isAuth]);
 
   return (
