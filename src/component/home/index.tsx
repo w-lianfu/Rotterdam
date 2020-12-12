@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from 'react';
-import { withRouter, RouteComponentProps, Link } from 'react-router-dom';
+import React, { ReactNode, useEffect } from 'react';
+import { Switch, Route, withRouter, RouteComponentProps } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import { Paper, Zoom, Fab, useScrollTrigger, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,6 +9,9 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import AppDial from '@con/app-dial';
 import AppTop from '@con/app-top';
 import AppHeader from '@con/app-header';
+import Setting from '@comp/setting';
+import AppWelcome from '@con/app-welcome';
+import Page404 from '@con/page-404';
 
 interface IProps extends RouteComponentProps {
   history: any,
@@ -71,8 +74,15 @@ const ScrollTop = (props: IScrollProps) => {
   );
 };
 
-const Home: FC = (props: IProps, state: IState) => {
+const Home = (props: IProps, state: IState) => {
   const classes = useStyles();
+  const { history } = props;
+  const { location } = history;
+  const { pathname } = location;
+
+  useEffect(() => {
+    // console.log('history: ', pathname);
+  }, [pathname]);
 
   return (
     <Box className={classes.container}>
@@ -83,8 +93,12 @@ const Home: FC = (props: IProps, state: IState) => {
         <section>
           <AppTop />
           <AppHeader />
-          <Link to="/setting">Setting Page</Link>
         </section>
+
+        <Switch>
+          <Route exact path="/setting" component={Setting} />
+          <Route component={pathname === '/' ? AppWelcome : Page404} />
+        </Switch>
 
         <ScrollTop>
           <Fab
