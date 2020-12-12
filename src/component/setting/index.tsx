@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { withRouter, RouteComponentProps, Link } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import { Paper, Button } from '@material-ui/core';
@@ -8,7 +8,7 @@ interface IProps extends RouteComponentProps {
 }
 interface IState {}
 
-const Setting: FC = (props: IProps, state: IState) => {
+const Setting = (props: IProps, state: IState) => {
   return (
     <Paper square>
       <h2>Setting Page</h2>

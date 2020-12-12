@@ -10,7 +10,7 @@ import { observer } from 'mobx-react';
 import '@commonScss/index.scss';
 import auth from '@commonStore/auth';
 import AppLock from './app-lock';
-import Home from '@comp/home';
+import AppPaper from './app-paper';
 
 interface IProps extends RouteComponentProps {
   history: any,
@@ -27,7 +27,7 @@ const AppRoute = (props: IProps, state: IState) => {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={isAuth ? Home : AppLock} />
+        <Route path="/" component={isAuth ? AppPaper : AppLock} />
       </Switch>
     </Router>
   );
