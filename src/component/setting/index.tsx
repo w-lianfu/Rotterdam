@@ -13,7 +13,10 @@ const Setting = (props: IProps, state: IState) => {
     <Paper square>
       <h2>Setting Page</h2>
       <Link to="/">
-        <Button variant="contained" color="primary">Go Home</Button>
+        <Button variant="contained" color="primary">Home Page</Button>
+      </Link>
+      <Link to="/99">
+        <Button variant="contained">To 99</Button>
       </Link>
     </Paper>
   );

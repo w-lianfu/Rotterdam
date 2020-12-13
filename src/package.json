@@ -1,7 +1,7 @@
 {
   "name": "Rotterdam",
   "productName": "Rotterdam",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Rotterdam",
   "main": "./main.prod.js",
   "author": {
