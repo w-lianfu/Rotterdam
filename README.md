@@ -3,8 +3,8 @@
 ## Install
 
 ```bash
-git clone https://github.com/w-lianfu/dublin.git
-cd dublin
+git clone https://github.com/w-lianfu/Rotterdam.git
+cd Rotterdam
 yarn
 ```
 
@@ -30,4 +30,4 @@ yarn package
 
 ## License
 
-MIT © [Dublin](https://github.com/w-lianfu/dublin/)
+MIT © [Rotterdam](https://github.com/w-lianfu/Rotterdam/)
